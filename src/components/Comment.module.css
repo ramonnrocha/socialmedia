@@ -1,0 +1,91 @@
+.comment {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1.6rem;
+}
+
+.comment > img {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 8px;
+  
+}
+
+.commentBox {
+  flex: 1;
+}
+
+.commentContent {
+  background: var(--gray-700);
+  border-radius: 8px;
+  padding: 1.6rem;
+
+}
+
+.commentContent header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.authorAndTime strong {
+  display: block;
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+.authorAndTime time {
+  display: block;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--gray-400);
+}
+
+.commentContent header button {
+  background: transparent;
+  border: 0;
+  color: var(--gray-400);
+  cursor: pointer;
+  line-height: 0;
+  border-radius: 4px;
+  transition: color 0.2s;
+}
+
+.commentContent header button:hover {
+  color: var(--red);
+}
+
+.commentContent p {
+  margin-top: 1rem;
+  color: var(--gray-300);
+  font-size: 1.4rem;
+}
+
+.commentBox footer {
+  margin-top: 1rem;
+  display: flex;
+}
+
+.commentBox footer button {
+  background: transparent;
+  border: 0;
+  color: var(--gray-400);
+  cursor: pointer;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  border-radius: 2px;
+}
+
+.commentBox footer button:hover {
+  color: var(--green-300);
+}
+
+.commentBox footer button svg {
+  margin-right: 1rem;
+}
+
+.commentBox footer button span::before {
+  content:"\2022";
+  padding: 0 1rem;
+}

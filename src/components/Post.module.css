@@ -1,0 +1,148 @@
+.post {
+  background: var(--gray-800);
+  border-radius: 8px;
+  padding: 4rem;
+}
+
+.post + .post {
+  margin-top: 3.8rem;
+}
+
+.post .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.post .header time{
+  font-size: 1.4rem;
+  color: var(--gray-400);
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+
+
+}
+
+.authorInfo strong {
+  font-size: 1.6rem;
+  font-weight: 700;
+  display: block;
+  color: var(--gray-100);
+  line-height: 1.6;
+
+}
+
+.authorInfo span {
+  font-size: 1.4rem;
+  display: block;
+  color: var(--gray-400);
+  line-height: 1.6;
+    
+}
+
+
+.content {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: var(--gray-300);
+  margin-top: 2.4rem;
+}
+
+.content p {
+  margin-top: 1.6rem;
+}
+
+.content a {
+  font-weight: bold;
+  color: var(--green-580);
+  text-decoration: none;
+
+}
+
+.avatar {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 8px;
+  border: 3px solid var(--gray-800) ;
+  outline: 3px solid var(--green-580);
+  box-sizing: initial;
+}
+
+.feedback {
+  border-top: 1px solid var(--gray-600);
+  margin-top: 2.4rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  padding-inline: 0;
+  padding-block: 2.4rem;
+}
+
+.feedback > strong {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--gray-100);
+  
+}
+
+
+.feedback textarea {
+  border: 1px solid var(--gray-800);
+  padding: 1rem;
+  background-color: var(--gray-900);
+  color: var(--gray-100);
+  height: min(9.2rem);
+  border-radius: 8px;
+  resize: none;
+  width: 100%;
+  outline: none;
+  font-size: 1.6rem;
+
+  transition: border 0.2s;
+}
+
+.feedback textarea:hover {
+  border: 1px solid var(--green-580);
+}
+
+.feedback footer {
+  visibility: hidden;
+  max-height: 0;
+}
+
+.feedback:focus-within footer {
+  visibility: visible;
+  max-height: none;
+}
+
+.button{
+  border-radius: .8rem;
+  height: 4.9rem;
+  width: 10.8rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--green-580);
+  color: var(--white);
+  margin-top: .5rem;
+  transition: background-color.2s;
+  border: none;
+  cursor: pointer;
+
+ 
+}
+
+.button:hover {
+  background: var(--green-300);
+}
+
+.commentList {
+  margin-top: 2.4rem;
+}
