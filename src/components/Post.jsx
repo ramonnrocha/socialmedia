@@ -1,29 +1,34 @@
+
 import { Comment} from './Comment'
 import { Avatar } from './Avatar'
 import styles from './Post.module.css'
 
-export function Post () {
+
+
+export function Post ({ author, publishedAt, content }) {
+
+
   return (
     <article className={styles.post}>
       <header className={styles.header}>
         <div className={styles.author}>
-          <Avatar  src="https://github.com/ramonnrocha.png" />
+          <Avatar  src={author.avatarUrl} />
           <div className={styles.authorInfo}>
-            <strong>Ramonn Rocha</strong>
-            <span>Developer Junior</span>
+            <strong>{author.name}</strong>
+            <span>{author.role}r</span>
           </div>
 
         </div>
-        <time dateTime='2022-05-11 08:13:00'> Publicado há 1h</time>
+        <time  title = "04 de outubro 2022"dateTime='2022-05-11 08:13:00'>Publicado á 1h</time>
       </header>
       <div className={styles.content}>
-      <p>Fala galeraa 👋</p>
-
-      <p>Acabei de subir mais um projeto no meu portifa. É um projeto que </p>fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀
-
-      <a>jane.design/doctorcare</a>
-
-      <p>#novoprojeto #nlw #rocketseat</p>
+        {content.map( line => {
+          if (line.type == 'paragraph') {
+            return <p>{line.content}</p>
+          } else if ( line.type == 'link'){
+            return <p><a href="#">{line.content}</a></p>
+          }
+        })}
       </div>
 
       <div className={styles.feedback}>
